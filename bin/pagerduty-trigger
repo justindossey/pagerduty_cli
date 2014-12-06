@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+
+# Trigger a PagerDuty alert.
+
+require 'rubygems'
+require 'pagerduty_cli'
+
+PagerdutyCli::Trigger.trigger(ARGV)

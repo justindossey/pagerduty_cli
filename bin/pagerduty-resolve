@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+
+# Resolve a PagerDuty alert.
+
+require 'rubygems'
+require 'pagerduty_cli'
+
+PagerdutyCli::Resolve.resolve(ARGV)
