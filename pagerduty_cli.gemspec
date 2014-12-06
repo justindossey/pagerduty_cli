@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
   spec.summary       = 'ruby CLI for PagerDuty API'
   spec.description   = 'ruby CLI for PagerDuty API. '\
     'Supports sending triggers and resolves.'
-  spec.homepage      = ''
+  spec.homepage      = 'https://github.com/justindossey/pagerduty_cli'
   spec.license       = 'MIT'
 
   spec.bindir        = 'bin'
