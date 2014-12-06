@@ -5,6 +5,8 @@ A Ruby-based CLI to PagerDuty. Supports triggers and resolves.
 Inspired by Pinterest's Python implementation:
 https://github.com/pinterest/pagerduty-monit
 
+Requires Ruby >= 1.9.3.
+
 ## Installation
 
 Add to your Gemfile:
