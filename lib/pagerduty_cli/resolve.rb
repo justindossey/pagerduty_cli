@@ -5,6 +5,7 @@ module PagerdutyCli
     def initialize(args)
       @me = 'pagerduty_resolve'
       parse_opts(args)
+      require_event
       load_data
     end
 

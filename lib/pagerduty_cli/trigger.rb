@@ -13,6 +13,7 @@ module PagerdutyCli
     def initialize(args)
       @me = 'pagerduty_trigger'
       parse_opts(args)
+      require_event
       load_data
       return unless @options[:force] || !incident_is_too_fresh?
       touch_incident_file unless @options[:no_touch]

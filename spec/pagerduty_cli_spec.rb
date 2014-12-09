@@ -81,6 +81,18 @@ describe PagerdutyCli do
     expect(stub_actor.options[:event]).to eq('foo')
   end
 
+  it 'returns an error when no event is specified' do
+    args = []
+    stub_actor = StubPagerdutyCliActor.new
+    stub_actor.options[:event] = nil
+    allow($stderr).to receive(:puts)
+    stub_optionparser = OptionParser.new
+    stub_actor.parse_common_options(stub_optionparser)
+    stub_optionparser.parse!(args)
+    expect { stub_actor.require_event }.to raise_error(SystemExit)
+    expect($stderr).to have_received(:puts)
+  end
+
   it 'prints help and exits with -h' do
     args = %w(-h)
     stub_actor = StubPagerdutyCliActor.new

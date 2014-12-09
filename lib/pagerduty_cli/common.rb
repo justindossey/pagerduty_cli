@@ -57,5 +57,11 @@ module PagerdutyCli
       end
     end
     # rubocop:enable MethodLength
+
+    # croak if required options are not present
+    def require_event
+      return if @options[:event]
+      croak('Error: event option is required. Run with -h to see usage.')
+    end
   end
 end
